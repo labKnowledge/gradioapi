@@ -170,7 +170,7 @@ class ChatService:
                             # Assuming the response is always in the last position
                             response_data = data["output"]["data"][-1][-1]
                             return {
-                                "content": response_data[0] if response_data else ""
+                                "content": response_data[1] if response_data else ""
                             }
                     except json.JSONDecodeError as e:
                         return {"error": f"Failed to parse response: {str(e)}"}
